@@ -22,15 +22,58 @@
 	p {
 		@apply leading-relaxed;
 	}
-	nav a {
-		@apply p-1 font-bold tracking-wider mx-2;
-	}
 	a:hover {
 		text-decoration: underline;
+	}
+
+	body {
+		position: relative;
+		min-height: 100vh;
 	}
 }
 
 @layer components {
+	nav a {
+		@apply p-1 font-bold tracking-wider mx-2;
+	}
+
+	#main {
+		height: 25rem;
+		background: #000;
+	}
+
+	#big-text {
+		position: relative;
+	}
+	#big-text::after {
+		position: absolute;
+		bottom: -1rem;
+		display: block;
+		content: 'The best burger you\'ve ever had';
+		transform: scaleY(-1);
+		opacity: 0.25;
+		color: #FFF;
+		filter: blur(2px);
+	}
+
+	footer {
+		position: fixed;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+	}
+
+	#burger-img {
+		height: 25rem;
+
+		float: right;
+		width: auto;
+
+	}
+
+	button {
+		@apply px-2 py-1 mr-1 text-white border-2 border-white hover:bg-white hover:text-black;
+	}
 
 }
 
