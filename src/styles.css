@@ -22,6 +22,12 @@
 	p {
 		@apply leading-relaxed;
 	}
+	nav a {
+		@apply p-1 font-bold tracking-wider mx-2;
+	}
+	a:hover {
+		text-decoration: underline;
+	}
 }
 
 @layer components {
