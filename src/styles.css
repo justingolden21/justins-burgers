@@ -65,14 +65,18 @@
 
 	#burger-img {
 		height: 25rem;
-
 		float: right;
 		width: auto;
-
+		opacity: 0.75;
 	}
+
+/*	button:hover ~ #burger-img {
+		opacity: 1;
+	}*/
 
 	button {
 		@apply px-2 py-1 mr-1 text-white border-2 border-white hover:bg-white hover:text-black;
+		transition: background-color 0.2s linear;
 	}
 
 }
